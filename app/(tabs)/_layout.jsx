@@ -12,7 +12,7 @@ const TabIcon = ({icon, color, name, focused}) => {
         tintColor={color}
         className="w-6 h-6"
         />
-        <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`}>
+        <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`} style={{color:color}}>
           {name}
         </Text>
     </View>
@@ -56,14 +56,14 @@ const TabsLayout
       options={{
         title:'Bookmark',
         headerShown: false,
-        tabBarIcon : ({color, focused}) => {
+        tabBarIcon : ({color, focused}) => (
           <TabIcon 
           icon={icons.bookmark}
           color= {color}
           name= 'Bookmark'
           focused={focused}
           />
-        }
+        )
       }}
       />
 
@@ -72,14 +72,14 @@ const TabsLayout
             options={{
               title:'Create',
               headerShown: false,
-              tabBarIcon : ({color, focused}) => {
+              tabBarIcon : ({color, focused}) => (
                 <TabIcon 
                 icon={icons.plus}
                 color= {color}
                 name= 'Create'
                 focused={focused}
                 />
-              }
+              )
             }}
             />
 
@@ -88,14 +88,14 @@ const TabsLayout
                   options={{
                     title:'Profile',
                     headerShown: false,
-                    tabBarIcon : ({color, focused}) => {
+                    tabBarIcon : ({color, focused}) => (
                       <TabIcon 
                       icon={icons.profile}
                       color= {color}
                       name= 'Profile'
                       focused={focused}
                       />
-                    }
+                    )
                   }}
                   />
     </Tabs>
