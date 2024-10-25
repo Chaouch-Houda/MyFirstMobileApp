@@ -1,8 +1,8 @@
 import { View, Text, Image } from 'react-native'
 import {Tabs, Redirect} from 'expo-router'
-
 import {icons} from '../../constants'
 
+// Component to render the icon and label of each tab
 const TabIcon = ({icon, color, name, focused}) => {
   return (
     <View className="items-center justify-center gap-2">
@@ -25,7 +25,7 @@ const TabsLayout
     <>
     <Tabs
       screenOptions={{
-        tabBarShowLabel:false,
+        tabBarShowLabel:false, // Disables the default tab labels (we are creating custom ones)
         tabBarActiveTintColor: '#FFA001',
         tabBarInactiveTintColor: '#CDCDE0',
         tabBarStyle: {
